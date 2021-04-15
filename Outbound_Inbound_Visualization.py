@@ -185,9 +185,9 @@ for x in X:
 for x in X:
     plt.hlines(-40, x-0.5, x-0.3, colors = "blue")
 for x in X:
-    plt.hlines(-20, x-0.3, x-0.1, colors = "blue")
+    plt.hlines(-40, x-0.3, x-0.1, colors = "blue")
 for x in X:
-    plt.hlines(-40, x-0.1, x+0.1, colors = "blue")
+    plt.hlines(-20, x-0.1, x+0.1, colors = "blue")
 plt.xticks(X,week_date)
 plt.title(f'Outbound & Inbound data per shift from {start_date} - {end_date}', fontdict={'size':20})
 plt.ylabel("Amount",fontsize = 15)
