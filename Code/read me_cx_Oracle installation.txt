@@ -1,0 +1,16 @@
+
+CX_Oracle package aims to help programmer use python to connect Oracle SQL database.
+
+To install CX_Oracle, the installation is a little bit complicated.
+
+Theoretically, if the operation system is windows10, please follow the steps:
+1. Run'python -m pip install cx_Oracle --upgrade' in Anaconda prompt
+2. Download an Oracle Instant Client 19, 18, 12, or 11.2 “Basic” or “Basic Light” zip file
+3. Unzip Instant Client
+4. Install VS2017 for Instant Client 19.
+5. Run'import cx_Oracle
+      cx_Oracle.init_oracle_client(lib_dir="route to your instant client")'in python
+#'cx_Oracle.init_oracle_client(lib_dir="route to your instant client"'This command is required everytime you start a new kernel.
+
+
+Steps can be found on 'https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html#installing-cx-oracle-on-windows' as well
