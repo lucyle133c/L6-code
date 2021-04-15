@@ -687,8 +687,8 @@ if merged_Data_top.shape[0]>0:
     for row in range(1,merged_Data_top.shape[0] + 1):
             for col in range(0,merged_Data_top.shape[1]):
                 table.cell(row,col).text = str(merged_Data_top.iloc[row-1,col])      
-                
-ppt.save( f'C:/JZhou/L6/Heatmap/heatmap and record till {date}.pptx')
+filesave = output_path+f'/heatmap and record till {date}.pptx'
+ppt.save(filesave)
 
 '''
 For Shift & Occurence Table, it's not that smart to name the variables based on the top/bot machine,
