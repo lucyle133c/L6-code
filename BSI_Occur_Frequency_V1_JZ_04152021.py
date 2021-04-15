@@ -24,7 +24,8 @@ os.chdir(path)
 # Download 'bsi-export_run-per-row.csv' file under 'Data Summary' folder.
 temp_path = path+'/Data Summary'
 url = 'http://10.20.199.186:8084/cb/bsi/bsi-export_run-per-row.csv'  
-urllib.request.urlretrieve(url, os.path.join(temp_path,'bsi-export_run-per-row.csv'))
+bsi_path = temp_path + '/bsi-export_run-per-row.csv'
+urllib.request.urlretrieve(url, bsi_path)
 
 bsi = pd.read_csv(os.path.join(temp_path,'bsi-export_run-per-row.csv'))
 bsi['BSI Run Time'] = pd.to_datetime(bsi['BSI Run Time'])# Change the time data type
