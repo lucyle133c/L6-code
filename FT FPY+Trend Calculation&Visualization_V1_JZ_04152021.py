@@ -28,20 +28,21 @@ os.chdir(path)
 
 # Download 'bsi-export_run-per-row.csv' file under 'Data Summary' folder.
 temp_path = path+'/Data Summary'
-url = 'http://10.20.199.186:8084/cb/bsi/bsi-export_run-per-row.csv'  
-urllib.request.urlretrieve(url, os.path.join(temp_path,'bsi-export_run-per-row.csv'))
+url = 'http://10.20.199.186:8083/cb/ft/ft-export_run-per-row.csv'  
+ft_path = temp_path + '/ft-export_run-per-row.csv'
+urllib.request.urlretrieve(url, ft_path)
 #os.chdir(r"C:\Users\ma.xiaolong\Documents\Projects\L6 Data Science\L6 Data\Essential Data\AWS Presentation\Weekly Data BSI & FT")
 
 #wk=11
 #path = f"./WK{wk} FT Report"
 #os.makedirs( path,exist_ok=True )
 
-FT_workpath = temp_path+r'/bsi-export_run-per-row.csv'
+FT_workpath = temp_path+r'/ft-export_run-per-row.csv'
 
 start_date = pd.to_datetime('2021/3/15')
 end_date = pd.to_datetime('2021/4/02')
 
-fpy_savepath = temp_path+r'C/BSI For FPY Calculation Usage only.csv'
+fpy_savepath = temp_path+r'C/FT For FPY Calculation Usage only.csv'
 
 
 def FT(FT_workpath, fpy_savepath, start_date, end_date):
