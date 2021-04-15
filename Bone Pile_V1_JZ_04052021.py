@@ -26,11 +26,14 @@ os.chdir(path)
 
 temp_path = path+'/Data Summary/Bone Pile Repair'
 url = 'http://10.20.199.186:8083/cb/ft/ft-export_run-per-row.csv'  
-urllib.request.urlretrieve(url, os.path.join(temp_path,'ft-export_run-per-row.csv'))
+ft_path = temp_path + '/ft-export_run-per-row.csv'
+urllib.request.urlretrieve(url, ft_path)
 url = 'http://10.20.199.186:8084/cb/bsi/bsi-export_run-per-row.csv'  
-urllib.request.urlretrieve(url, os.path.join(temp_path,'bsi-export_run-per-row.csv'))
+bsi_path = temp_path + '/bsi-export_run-per-row.csv'
+urllib.request.urlretrieve(url, bsi_path)
 url = 'http://10.20.199.186:8082/cb/ict/ict-export_run-per-row.csv'  
-urllib.request.urlretrieve(url, os.path.join(temp_path,'ict-export_run-per-row.csv'))
+ict_path = temp_path + '/ict-export_run-per-row.csv'
+urllib.request.urlretrieve(url, ict_path)
 
 start_date = "'03-29-2021'"#Step 1: Change the start date
 end_date = "'04-04-2021'"#Step 2: Change the end date
