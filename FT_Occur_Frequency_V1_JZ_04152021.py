@@ -25,7 +25,8 @@ os.chdir(path)
 # Download 'ft-export_run-per-row.csv' file under 'Data Summary' folder.
 temp_path = path+'/Data Summary'
 url = 'http://10.20.199.186:8083/cb/ft/ft-export_run-per-row.csv'  
-urllib.request.urlretrieve(url, os.path.join(temp_path,'ft-export_run-per-row.csv'))
+ft_path = temp_path + '/ft-export_run-per-row.csv'
+urllib.request.urlretrieve(url, ft_path)
 
 
 ft = pd.read_csv(os.path.join(temp_path,'ft-export_run-per-row.csv'))
