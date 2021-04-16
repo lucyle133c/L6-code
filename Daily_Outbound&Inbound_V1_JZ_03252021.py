@@ -34,8 +34,8 @@ path = "C:/JZhou/L6"
 #at the first time you run this script. No need to change it in the future.
 os.chdir(path)
 
-from Code.outbound import OUTBOUND_COLLECTION
-from Code.outbound import inbound_outbound
+from Code.Inbound_outbound import OUTBOUND_COLLECTION
+from Code.Inbound_outbound import inbound_outbound
 '''
 Part1: Read and download the outbound data. Combine with the inbound data from 
 pangus and outout a repair summary file.
