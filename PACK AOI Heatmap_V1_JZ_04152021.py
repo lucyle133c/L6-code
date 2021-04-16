@@ -21,7 +21,7 @@ pd.set_option('display.max_rows', None)
 cx_Oracle.init_oracle_client(lib_dir=r"C:\JZhou\oracle sql\instantclient_19_10")#Change the direction to where you put the oracle instant client
 #For PANGUS PRD account, ask Xiaolong MA for credential.
 dsnStr = cx_Oracle.makedsn("10.20.193.53", "1521", "IMSDBPROD")#The structure is (ip,port,SID)
-db = cx_Oracle.connect('xiaoma','foxconn123MKE',dsn=dsnStr)#The structure is (Username,Password,dsnstr)
+db = cx_Oracle.connect('xiaoma','XXXXXXXXXXXXXXXXXXXXXXX123MKE',dsn=dsnStr)#The structure is (Username,Password,dsnstr)
 
 cur = db.cursor() 
 
