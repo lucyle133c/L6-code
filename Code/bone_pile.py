@@ -31,7 +31,7 @@ def bone_pile1(start_date,end_date):
                    JOIN IMS.TB_BS_BAD_ITEM b ON b.BAD_ITEM_ID = t2.BAD_ITEM_ID\
                  WHERE WP_ID IN ('PTH-Packing-AOI',  'PTH-OST')\
                       AND t1.SYS_CRT_DATE BETWEEN  TO_DATE({start_date}, 'MM/DD/YYYY') AND TO_DATE({end_date}, 'MM/DD/YYYY')\
-                      AND b.BAD_ITEM_ID NOT IN ('Dimension', 'OCROCV', 'Coplanarity')\
+                      AND b.BAD_ITEM_ID NOT IN ('Dimension', 'OCROCV', 'Coplanarity','UpsideDown')\
                       AND LB_ID LIKE 'W%'\
                 )g\
                  WHERE rank_time = 1"
@@ -55,7 +55,7 @@ def bone_pile2(start_date,end_date):
                  WHERE WP_ID IN ('Process009',  'Process019')\
                       AND t2.FIELD_EX1 != 'PASS'\
                       AND t1.SYS_CRT_DATE BETWEEN  TO_DATE({start_date}, 'MM/DD/YYYY') AND TO_DATE({end_date}, 'MM/DD/YYYY')\
-                      AND b.BAD_ITEM_ID NOT IN ('Dimension', 'OCROCV', 'Coplanarity')\
+                      AND b.BAD_ITEM_ID NOT IN ('Dimension', 'OCROCV', 'Coplanarity','UpsideDown')\
                       AND LB_ID LIKE 'W%'\
                           )g\
                  WHERE rank_time = 1"
