@@ -26,29 +26,29 @@ the comparison.
 """
 
 
+from Code.outbound import inbound_outbound
+from Code.outbound import OUTBOUND_COLLECTION
 import os
 import pandas as pd
 import numpy as np
 path = "C:/JZhou/L6"
-#Step 0: For other users, please change the path to where you want to put files
-#at the first time you run this script. No need to change it in the future.
+# Step 0: For other users, please change the path to where you want to put files
+# at the first time you run this script. No need to change it in the future.
 os.chdir(path)
 
-from Code.outbound import OUTBOUND_COLLECTION
-from Code.outbound import inbound_outbound
 '''
 Part1: Read and download the outbound data. Combine with the inbound data from 
 pangus and outout a repair summary file.
 '''
 
-start_date = "'2021/04/05'"#Step 1: Change the start date
-end_date = "'2021/04/11'"#Step 2: Change the end date. The date should be the next day of the end date you want.
-end_date1 = '4-12'#Step 3: Type in the end date in another format. No need to be the next day
-outbound_data = OUTBOUND_COLLECTION(start_date,end_date)
+start_date = "'2021/04/05'"  # Step 1: Change the start date
+# Step 2: Change the end date. The date should be the next day of the end date you want.
+end_date = "'2021/04/11'"
+# Step 3: Type in the end date in another format. No need to be the next day
+end_date1 = '4-12'
+outbound_data = OUTBOUND_COLLECTION(start_date, end_date)
 inbound_path = f'./Data Summary/inbound till {end_date1}.xlsx'
 savepath = f'./Data Summary/inbound_outbound summary/Repair Summary till {end_date1}.csv'
 
-outbound_inbound_result = inbound_outbound(inbound_path, outbound_data, savepath)
-
-
-
+outbound_inbound_result = inbound_outbound(
+    inbound_path, outbound_data, savepath)
